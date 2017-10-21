@@ -4,6 +4,8 @@ import { Provider } from 'react-redux'
 import { createStore, compose } from 'redux';
 import { Router, browserHistory } from 'react-router'
 import thunk from 'redux-thunk';
+import './index.css'
+
 
 import appReducer from './reducers'
 import App from './components/App'

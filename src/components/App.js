@@ -1,16 +1,18 @@
 import React from 'react'
 import Counter from '../containers/counter'
+import Nav from './Nav'
+import Footer from './Footer'
 import { Link } from 'react-router'
+import './App.css'
+
 
 const App = (props) => (
-  <div>
-    <div>
-      <Link to='/'>Counter</Link>
-      { '  ' }
-      <Link to='/home'>Home</Link>
-    </div>
+  <div className='app'>
+    <Nav />
+    <div className='content'>
     {props.children}
-    <div>footer</div>
+    </div>
+    <Footer />
   </div>
 )
 

@@ -7,7 +7,7 @@ import Counter from './containers/counter'
 
 export default (
   <Route path='/' component={App} >
-    <IndexRoute component={Counter} />
-    <Route path='/home' component={Home} />
+    <IndexRoute component={Home} />
+    <Route path='/counter' component={Counter} />
   </Route>
 )
