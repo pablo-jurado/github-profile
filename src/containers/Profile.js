@@ -1,8 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import UserNotFound from '../components/UserNotFound'
 import './Profile.css'
+
 const Profile = ({ profile }) => {
-  if (!profile.name) return <div>No User Found</div>
+  if (!profile.name) return <UserNotFound />
   return (
     <div className='avatar'>
       <h2>{ profile.name }</h2>
