@@ -1,0 +1,21 @@
+.avatar {
+  flex: 1;
+  margin: 20px;
+  text-align: center;
+}
+
+.avatar h1 {
+  margin: 0;
+}
+
+.avatar img {
+  max-width: 250px;
+  border: solid 5px white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px lightgrey;
+  margin: 20px;
+}
+
+.avatar span {
+  display: block;
+}

@@ -1,0 +1,27 @@
+form {
+  margin: 30px 10px;
+  text-align: center;
+}
+
+form input {
+  font-size: 1em;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 20px lightgrey;
+}
+form input[type="submit"] {
+  background: #00bcd4;
+  border: solid 2px #00bcd4;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  border: solid 2px #00bcd4;
+  background: white;
+  color: #00bcd4;
+  font-weight: bold;
+}

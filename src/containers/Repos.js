@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import _ from 'lodash'
+import './Repos.css'
 
 const Repos = ({repos}) => {
   if (!repos || repos.length === 0) return <div>No repos found</div>
@@ -16,9 +17,9 @@ const Repos = ({repos}) => {
   })
 
   return (
-    <ul>
-      {reposArr}
-    </ul>
+      <ul>
+        {reposArr}
+      </ul>
   )
 }
 

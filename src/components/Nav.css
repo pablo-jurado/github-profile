@@ -1,5 +1,7 @@
 Nav {
-  background: #ccc;
+  background-color: #607d8b;
+  color: white;
+  font-size: 1.5em;
+  padding: 30px;
   text-align: center;
-  padding: 10px;
 }

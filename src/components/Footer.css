@@ -1,5 +1,6 @@
 footer {
-  background: #ccc;
+  background-color: #607d8b;
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 10px;
 }

@@ -6,7 +6,6 @@ import { Router, browserHistory } from 'react-router'
 import './index.css'
 
 import reducers from './reducers'
-import App from './components/App'
 import routes from './routes'
 
 let store = createStore(

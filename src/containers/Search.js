@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { getRepos, getProfile } from '../actions'
 import axios from 'axios'
 import _ from 'lodash'
+import './Search.css'
 
 class Search extends Component {
   constructor (props) {
@@ -36,6 +37,8 @@ class Search extends Component {
       axios.get(FULL_PROFILE_API)
       .then((response) => {
         this.props.getProfile(response.data)
+        // after data is fetch user component is loaded
+        this.props.router.push('/user')
       })
     }
   }
