@@ -16,6 +16,6 @@
   margin: 20px;
 }
 
-.avatar span {
-  display: block;
+.avatar div {
+  margin: 10px;
 }

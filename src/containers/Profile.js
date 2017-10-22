@@ -3,13 +3,23 @@ import { connect } from 'react-redux'
 import './Profile.css'
 const Profile = ({ profile }) => {
   if (!profile.name) return <div>No User Found</div>
-
+  console.log(profile)
   return (
     <div className='avatar'>
-      <h1>{ profile.name }</h1>
-      <img src={profile.avatar_url} alt='github user' />
-      <span>{ profile.bio }</span>
-      <span><a href={profile.html_url} target='_blank' rel='noopener noreferrer'>GitHub profile</a></span>
+      <h2>{ profile.name }</h2>
+      <div><a href={ profile.html_url } target='_blank' rel='noopener noreferrer'>GitHub profile</a></div>
+
+      <img src={ profile.avatar_url } alt='github user' />
+      <div>
+        <strong>{ profile.login }</strong><span>
+        &nbsp;-&nbsp;
+        <a href={ profile.blog } target='_blank' rel='noopener noreferrer'>{ profile.blog }</a></span>
+      </div>
+
+      <div>{ profile.bio }</div>
+      <div>{ profile.company }</div>
+      <div>{ profile.location }</div>
+
     </div>
   )
 }

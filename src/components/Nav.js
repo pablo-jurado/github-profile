@@ -5,7 +5,7 @@ import './Nav.css'
 
 const Nav = () => (
   <nav>
-    <Link to='/'>Home</Link>
+    <Link to='/'>Github Profile</Link>
   </nav>
 )
 

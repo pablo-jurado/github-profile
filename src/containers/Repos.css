@@ -4,9 +4,16 @@ ul {
   padding: 0;
   margin: 0;
   margin: 20px;
-
 }
 
 ul hr {
   margin-top: 30px;
+}
+
+li:last-child hr {
+  display: none;
+}
+
+ul li a h4:hover {
+  color: #00bcd4;
 }
