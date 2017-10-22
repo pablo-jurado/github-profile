@@ -48,7 +48,7 @@ class Search extends Component {
       <form onSubmit={this.handleSubmit}>
         <input
           type='text'
-          placeholder='input user name'
+          placeholder='Input username'
           value={this.state.text}
           onChange={this.handleInput}
         />

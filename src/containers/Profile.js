@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import './Profile.css'
 const Profile = ({ profile }) => {
   if (!profile.name) return <div>No User Found</div>
-  console.log(profile)
   return (
     <div className='avatar'>
       <h2>{ profile.name }</h2>
