@@ -1,18 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const Repo = (props) => {
-  console.log(props)
+const Repo = ({repo}) => {
+  if (!repo) return <div>No data found</div>
   return (
     <div>
-      single repo
+      Title: {repo.name}
     </div>
   )
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps.params.id)
-  return { repo: state.repos }
+  const id = ownProps.params.id
+  return { repo: state.allRepos[id] }
 }
 
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { getRepos } from '../actions'
+import { getRepos, getProfile } from '../actions'
 import axios from 'axios'
 import _ from 'lodash'
 
@@ -24,13 +24,19 @@ class Search extends Component {
     if (name.trim() !== '') {
       const API_KEY = process.env.REACT_APP_SECRET_KEY
       const API_URL = 'https://api.github.com/users/'
-      const FULL_API = API_URL + name + '/repos' + API_KEY
+      const FULL_REPOS_API = API_URL + name + '/repos' + API_KEY
 
-      axios.get(FULL_API)
+      axios.get(FULL_REPOS_API)
         .then((response) => {
           const dataObj = _.keyBy(response.data, 'id')
           this.props.getRepos(dataObj)
         })
+
+      const FULL_PROFILE_API = API_URL + name + API_KEY
+      axios.get(FULL_PROFILE_API)
+      .then((response) => {
+        this.props.getProfile(response.data)
+      })
     }
   }
 
@@ -50,7 +56,10 @@ class Search extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => (
-  { getRepos: bindActionCreators(getRepos, dispatch) }
+  {
+    getRepos: bindActionCreators(getRepos, dispatch),
+    getProfile: bindActionCreators(getProfile, dispatch)
+  }
 )
 
 export default connect(
