@@ -1,9 +1,3 @@
-# Create React App + Redux + React Router v3
-
-> This is a basic project starter for a React/Redux/Rooter using Create React App
-
-
-
 # GitHub Profile API
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)
