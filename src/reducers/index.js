@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import counterReducer from './counter_reducer'
+import reposReducer from './repos_reducer'
 
-const todoApp = combineReducers({
-  counter: counterReducer
+const reducers = combineReducers({
+  allRepos: reposReducer
 })
 
-export default todoApp
+export default reducers

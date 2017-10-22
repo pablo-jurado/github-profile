@@ -2,15 +2,12 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
 import App from './components/App'
-import Home from './components/Home'
-import User from './components/User'
-
-import Counter from './containers/counter'
+import Repos from './components/Repos'
+import Repo from './components/Repo'
 
 export default (
   <Route path='/' component={App} >
-    <IndexRoute component={Home} />
-    <Route path='/counter' component={Counter} />
-    <Route path='/user/:id' component={User} />
+    <IndexRoute component={Repos} />
+    <Route path='/repo/:id' component={Repo} />
   </Route>
 )

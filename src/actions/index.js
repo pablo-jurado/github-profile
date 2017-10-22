@@ -1,16 +1,8 @@
-export const INC = 'INC'
-export const DEC = 'DEC'
+export const GET_REPOS = 'GET_REPOS'
 
-export const increment = () => {
+export const getRepos = (repos) => {
   return {
-    type: INC,
-    payload: 1
-  }
-}
-
-export const decrement = () => {
-  return {
-    type: DEC,
-    payload: 1
+    type: GET_REPOS,
+    payload: repos
   }
 }

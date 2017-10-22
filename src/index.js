@@ -1,30 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore, compose } from 'redux';
+import { createStore } from 'redux';
 import { Router, browserHistory } from 'react-router'
-import thunk from 'redux-thunk';
 import './index.css'
 
-
-import appReducer from './reducers'
+import reducers from './reducers'
 import App from './components/App'
 import routes from './routes'
 
-function configureStore(state){
-  return createStore(
-    appReducer,
-    state,
-    compose(
-      window.devToolsExtension ? window.devToolsExtension() : f => f
-    )
-  );
-}
-
-const initialState = {}
-
-let store = configureStore(initialState)
-
+let store = createStore(
+  reducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 render(
   <Provider store={store}>
